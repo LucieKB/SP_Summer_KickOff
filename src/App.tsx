@@ -1,7 +1,7 @@
 import "./App.css";
 import MapComponent from "./components/MapComponent";
 import { KinderTeam } from "./components/KinderTeam";
-import { createTheme, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import { ElemOne } from "./components/ElemOne";
 import { ElemTwo } from "./components/ElemTwo";
 import { MiddleSch } from "./components/MiddleSch";
