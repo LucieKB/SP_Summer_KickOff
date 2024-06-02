@@ -52,7 +52,7 @@ const MapComponent: React.FC = () => {
         )
         .addTo(map);
 
-      //Trivia
+      //Archery?
       new mapboxgl.Marker({
         color: "orange",
         anchor: "center",
@@ -64,6 +64,40 @@ const MapComponent: React.FC = () => {
               "Throw" +
               "</h4><p>" +
               "🎯💪Bring strength and precision 💪🎯" +
+              "</p>"
+          )
+        )
+        .addTo(map);
+
+      //Cornhole bags to place countries / Flags
+      new mapboxgl.Marker({
+        color: "lightblue",
+        anchor: "center",
+      })
+        .setLngLat([-111.624314, 40.750179])
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }).setHTML(
+            "<h4>" +
+              "🌎Geographs Needed🌎" +
+              "</h4><p>" +
+              "🇧🇷🇨🇦🇨🇿🇫🇷🇮🇸🇮🇹🇺🇸" +
+              "</p>"
+          )
+        )
+        .addTo(map);
+
+      // Lemonade + connections
+      new mapboxgl.Marker({
+        color: "yellow",
+        anchor: "center",
+      })
+        .setLngLat([-111.617579, 40.741163])
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }).setHTML(
+            "<h4>" +
+              "🍋🥤 + 🧐" +
+              "</h4><p>" +
+              "Drink a lemonade while playing Connections !" +
               "</p>"
           )
         )
