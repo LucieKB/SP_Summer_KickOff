@@ -3,9 +3,12 @@ import MapComponent from "./components/MapComponent";
 
 function App() {
   return (
-    <div className="App">
-      <MapComponent />
-    </div>
+    <>
+      <h1>Summit Park Summer KickOff</h1>
+      <div className="App">
+        <MapComponent />
+      </div>
+    </>
   );
 }
 

@@ -1,26 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import mapboxgl, { GeoJSONSourceRaw } from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 import "./MapComponent.css";
 
 const MapComponent: React.FC = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
-  //   const geojson = {
-  //     type: "FeatureCollection",
-  //     features: [
-  //       {
-  //         type: "Feature",
-  //         geometry: {
-  //           type: "Point",
-  //           coordinates: [-111.618639, 40.744528],
-  //         },
-
-  //         properties: {
-  //           title: "Mapbox",
-  //           description: "Push-Ups !",
-  //         },
-  //       },
-  //     ],
-  //   };
 
   useEffect(() => {
     mapboxgl.accessToken =
@@ -39,35 +23,50 @@ const MapComponent: React.FC = () => {
       // Add zoom controls
       map.addControl(new mapboxgl.NavigationControl(), "top-left");
 
-      // Add your custom markers and lines here
-      //   // add markers to map
-      //   geojson.features.forEach(function (marker) {
-      //     const [longitude, latitude] = marker.geometry.coordinates;
-      //     // create a HTML element for each feature
-      //     var el = document.createElement("div");
-      //     el.className = "marker";
-
-      //     // make a marker for each feature and add it to the map
-      //     new mapboxgl.Marker(el)
-      //       .setLngLat([longitude, latitude])
-      //       .setPopup(
-      //         new mapboxgl.Popup({ offset: 25 }) // add popups
-      //           .setHTML(
-      //             "<h3>" +
-      //               marker.properties.title +
-      //               "</h3><p>" +
-      //               marker.properties.description +
-      //               "</p>"
-      //           )
-      //       )
-      //       .addTo(map);
-      //   });
-
+      //Add markers
+      //Lin's
       new mapboxgl.Marker({
         color: "red",
         anchor: "center",
       })
-        .setLngLat([-111.618639, 40.7])
+        .setLngLat([-111.61242, 40.74559])
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }).setHTML(
+            "<h4>" + "Base Camp" + "</h4><p>" + "Start and finish !" + "</p>"
+          )
+        )
+        .addTo(map);
+
+      //Trivia
+      new mapboxgl.Marker({
+        color: "purple",
+        anchor: "center",
+      })
+        .setLngLat([-111.60802, 40.7451])
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }).setHTML(
+            "<h4>" +
+              "Trivia" +
+              "</h4><img src='https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Mario_and_Sonic_at_the_Olympic_Games_box_art.png/220px-Mario_and_Sonic_at_the_Olympic_Games_box_art.png' width='100px'>"
+          )
+        )
+        .addTo(map);
+
+      //Trivia
+      new mapboxgl.Marker({
+        color: "orange",
+        anchor: "center",
+      })
+        .setLngLat([-111.619055, 40.74707])
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }).setHTML(
+            "<h4>" +
+              "Throw" +
+              "</h4><p>" +
+              "🎯💪Bring strength and precision 💪🎯" +
+              "</p>"
+          )
+        )
         .addTo(map);
 
       // Clean up on unmount
