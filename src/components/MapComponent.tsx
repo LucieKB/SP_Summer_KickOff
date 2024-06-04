@@ -32,7 +32,13 @@ const MapComponent: React.FC = () => {
         .setLngLat([-111.61242, 40.74559])
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }).setHTML(
-            "<h4>" + "Base Camp" + "</h4><p>" + "Start and finish !" + "</p>"
+            "<h4>" +
+              "Base Camp" +
+              "</h4><p>" +
+              "Start and finish !" +
+              "</p><p>" +
+              "Bird House Painting !" +
+              "</p>"
           )
         )
         .addTo(map);
@@ -52,18 +58,18 @@ const MapComponent: React.FC = () => {
         )
         .addTo(map);
 
-      //Archery?
+      //Bridhouse and Garlic Mustard
       new mapboxgl.Marker({
-        color: "orange",
+        color: "green",
         anchor: "center",
       })
-        .setLngLat([-111.619055, 40.74707])
+        .setLngLat([-111.613416, 40.744926])
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }).setHTML(
             "<h4>" +
-              "Throw" +
+              "🐦‍⬛🐦‍🪺🌿💪" +
               "</h4><p>" +
-              "🎯💪Bring strength and precision 💪🎯" +
+              "Bird Houses and Garlic Mustard Pulling " +
               "</p>"
           )
         )
@@ -91,7 +97,7 @@ const MapComponent: React.FC = () => {
         color: "yellow",
         anchor: "center",
       })
-        .setLngLat([-111.617579, 40.741163])
+        .setLngLat([-111.619055, 40.74707])
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }).setHTML(
             "<h4>" +

@@ -8,10 +8,10 @@ export type TriviaQuestions = {
   answer: string;
 };
 
-export const TriviaQuestions = [
+export const triviaQuestions = [
   {
     id: 1,
-    category: "Videogames",
+    category: " 👾 Videogames 👾",
     question: "What year was the official release date of Minecraft?",
     choicesK: ["1991", "2011"],
     choicesE: ["1991", "2001", "2011", "2021"],
@@ -21,7 +21,7 @@ export const TriviaQuestions = [
 
   {
     id: 2,
-    category: "Pokémon",
+    category: "🦊 Pokémon 🐱",
     question:
       "What is the only Pokémon type that has never been super-effective against any other type?",
     choicesK: ["Water type", "Normal type"],
@@ -32,7 +32,7 @@ export const TriviaQuestions = [
 
   {
     id: 3,
-    category: "Videogames",
+    category: " 👾 Videogames 👾",
     question: "In Super Mario Bros. 3 what power-up item allows Mario to fly?",
     choicesK: [
       "The Super Leaf that transforms him into Racoon Mario",
@@ -50,7 +50,7 @@ export const TriviaQuestions = [
 
   {
     id: 4,
-    category: "Videogames",
+    category: " 👾 Videogames 👾",
     question:
       "What is the average age of a video game player according to recent studies?",
     choicesK: ["14", "34"],
@@ -61,7 +61,7 @@ export const TriviaQuestions = [
 
   {
     id: 5,
-    category: "Olympics",
+    category: "🥇 Olympics 🥇",
     question: "What is the distance of a marathon race in the Olympic Games?",
     choicesK: ["13.1 miles", "26.2 miles"],
     choicesE: ["13 miles", "20.1 miles", "26.2 miles", "32.4 miles"],
@@ -71,7 +71,7 @@ export const TriviaQuestions = [
 
   {
     id: 6,
-    category: "Videogames",
+    category: " 👾 Videogames 👾",
     question:
       "How many blocks does a player have to mine to craft a full set of diamond armor?",
     choicesK: ["24", "144"],
@@ -82,7 +82,7 @@ export const TriviaQuestions = [
 
   {
     id: 7,
-    category: "Videogames",
+    category: " 👾 Videogames 👾",
     question: "What is the best-selling video game of all time?",
     choicesK: ["Mario Kart", "Minecraft"],
     choicesE: ["Grand Theft Auto", "Mario Kart", "Minecraft", "Tetris"],
@@ -92,7 +92,7 @@ export const TriviaQuestions = [
 
   {
     id: 8,
-    category: "Olympics",
+    category: "🥇 Olympics 🥇",
     question:
       "What is the only new sport to make its debut in the Paris Olympics this summer?",
     choicesK: ["Breakdancing", "Climbing"],
@@ -103,7 +103,7 @@ export const TriviaQuestions = [
 
   {
     id: 9,
-    category: "Videogames",
+    category: " 👾 Videogames 👾",
     question:
       "What was the original name of Mario when he first appeared 43 years ago, in the 1981 arcade game Donkey Kong?",
     choicesK: ["Plumber Man", "Jump Man"],
@@ -114,7 +114,7 @@ export const TriviaQuestions = [
 
   {
     id: 10,
-    category: "Olympics",
+    category: "🥇 Olympics 🥇",
     question: "Which country has hosted the most Summer Olympics?",
     choicesK: ["USA", "Greece"],
     choicesE: ["USA", "Greece", "France", "Italy"],
@@ -124,7 +124,7 @@ export const TriviaQuestions = [
 
   {
     id: 11,
-    category: "Olympics",
+    category: "🥇 Olympics 🥇",
     question: "How old was the youngest Olympic medalist?",
     choicesK: [
       "Nadia Comǎneci in gymnastics at 14 y.o",

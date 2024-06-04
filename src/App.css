@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+#map-btn {
+  margin-top: 50px;
+  border-color: black;
+  margin-right: 5px;
+}
+
+#map-btn:hover {
+  color: white;
+  background-color: rgb(243, 157, 133);
+}

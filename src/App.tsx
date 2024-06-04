@@ -1,10 +1,13 @@
 import "./App.css";
+import { useState } from "react";
 import MapComponent from "./components/MapComponent";
 import { KinderTeam } from "./components/KinderTeam";
 import { createTheme, MantineProvider, rem } from "@mantine/core";
 import { ElemOne } from "./components/ElemOne";
 import { ElemTwo } from "./components/ElemTwo";
 import { MiddleSch } from "./components/MiddleSch";
+import { Trivia } from "./components/Trivia";
+import "@mantine/core/styles.css";
 
 function App() {
   const theme = createTheme({
@@ -50,20 +53,26 @@ function App() {
     },
   });
 
+  const [show, setShow] = useState(false);
+  console.log(show);
+
   return (
     <MantineProvider theme={theme}>
       <>
         <h1>Summit Park Summer KickOff</h1>
-        <p>
-          <div style={{ display: "flex" }}>
-            <KinderTeam />
-            <ElemOne />
-            <ElemTwo />
-            <MiddleSch />
-          </div>
-        </p>
+
+        <div style={{ display: "flex", marginBottom: "20px" }}>
+          <KinderTeam />
+          <ElemOne />
+          <ElemTwo />
+          <MiddleSch />
+        </div>
+
         <div className="App">
-          <MapComponent />
+          {show ? <Trivia /> : <MapComponent />}
+          <button id="map-btn" onClick={() => setShow(!show)}>
+            {show ? "Back to Map" : "Trivia Questions"}
+          </button>
         </div>
       </>
     </MantineProvider>

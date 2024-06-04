@@ -1,0 +1,21 @@
+.trivia-btn {
+  margin-top: 50px;
+  border-color: black;
+  margin-right: 5px;
+}
+
+.trivia-btn:hover {
+  color: white;
+  background-color: slategray;
+}
+
+#answer-btn {
+  margin-top: 50px;
+  border-color: black;
+  margin-right: 5px;
+}
+
+#answer-btn:hover {
+  color: white;
+  background-color: lightgreen;
+}
