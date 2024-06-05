@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import MapComponent from "./components/MapComponent";
-import { KinderTeam } from "./components/KinderTeam";
+// import { KinderTeam } from "./components/KinderTeam";
 import { createTheme, MantineProvider, rem } from "@mantine/core";
 import { ElemOne } from "./components/ElemOne";
 import { ElemTwo } from "./components/ElemTwo";
