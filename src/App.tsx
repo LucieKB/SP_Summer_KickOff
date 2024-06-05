@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState } from "react";
 import MapComponent from "./components/MapComponent";
-// import { KinderTeam } from "./components/KinderTeam";
 import { createTheme, MantineProvider, rem } from "@mantine/core";
 import { ElemOne } from "./components/ElemOne";
 import { ElemTwo } from "./components/ElemTwo";
@@ -61,7 +60,6 @@ function App() {
         <h1>Summit Park Summer KickOff</h1>
 
         <div style={{ display: "flex", marginBottom: "20px" }}>
-          {/* <KinderTeam /> */}
           <ElemOne />
           <ElemTwo />
           <MiddleSch />
