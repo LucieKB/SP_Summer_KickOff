@@ -2,8 +2,8 @@ export type TriviaQuestions = {
   id: number;
   category: string;
   question: string;
-  choicesK: [string, string];
-  choicesE: [string, string, string, string];
+  choicesK: [];
+  choicesE: [];
   choicesM: string;
   answer: string;
 };
@@ -75,7 +75,7 @@ export const triviaQuestions = [
     question:
       "How many blocks does a player have to mine to craft a full set of diamond armor?",
     choicesK: ["24", "144"],
-    choicesE: ["Right answer +- 5 blocks", "", "", ""],
+    choicesE: ["Right answer +- 5 blocks"],
     choicesM: "Right answer +- 2 blocks",
     answer: "24",
   },

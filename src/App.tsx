@@ -53,8 +53,7 @@ function App() {
     },
   });
 
-  const [show, setShow] = useState(false);
-  console.log(show);
+  const [showTrivia, setShowTrivia] = useState(false);
 
   return (
     <MantineProvider theme={theme}>
@@ -62,16 +61,24 @@ function App() {
         <h1>Summit Park Summer KickOff</h1>
 
         <div style={{ display: "flex", marginBottom: "20px" }}>
-          <KinderTeam />
+          {/* <KinderTeam /> */}
           <ElemOne />
           <ElemTwo />
           <MiddleSch />
         </div>
 
         <div className="App">
-          {show ? <Trivia /> : <MapComponent />}
-          <button id="map-btn" onClick={() => setShow(!show)}>
-            {show ? "Back to Map" : "Trivia Questions"}
+          {showTrivia ? <Trivia /> : <MapComponent />}
+          <button id="map-btn" onClick={() => setShowTrivia(!showTrivia)}>
+            {showTrivia ? "Back to Map" : "Trivia Questions"}
+          </button>
+          <button id="map-btn">
+            <a
+              style={{ color: "black" }}
+              href="https://connection-summit-park-seven.vercel.app/"
+            >
+              Connections
+            </a>
           </button>
         </div>
       </>

@@ -32,13 +32,7 @@ const MapComponent: React.FC = () => {
         .setLngLat([-111.61242, 40.74559])
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }).setHTML(
-            "<h4>" +
-              "Base Camp" +
-              "</h4><p>" +
-              "Start and finish !" +
-              "</p><p>" +
-              "Bird House Painting !" +
-              "</p>"
+            "<h4>" + "Base Camp" + "</h4><p>" + "Start and finish !"
           )
         )
         .addTo(map);
@@ -115,7 +109,7 @@ const MapComponent: React.FC = () => {
   }, []);
 
   return (
-    <div ref={mapContainer} style={{ width: "700px", minHeight: "700px" }} />
+    <div ref={mapContainer} style={{ width: "700px", minHeight: "500px" }} />
   );
 };
 

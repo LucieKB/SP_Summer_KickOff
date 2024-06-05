@@ -17,11 +17,11 @@ export const Trivia = () => {
           onChange={setGrade}
           name="Grades"
           label="Select the team's grade"
-          description="KinderGartners, Elementary or MiddleSchoolers? "
+          description=" Elementary or MiddleSchoolers? "
           withAsterisk
         >
-          <Group>
-            <Radio type="radio" value="K" label="KinderGarten" />
+          <Group style={{ justifyContent: "center", marginTop: "20px" }}>
+            {/* <Radio type="radio" value="K" label="KinderGarten" /> */}
             <Radio type="radio" value="E" label="Elementary" />
             <Radio type="radio" value="M" label="MiddleSchool" />
           </Group>
@@ -90,8 +90,16 @@ export const Trivia = () => {
           <button
             className="trivia-btn"
             onClick={() => {
-              setCurrent(current + 1);
-              setShowAnswer(false);
+              if (current < triviaQuestions.length - 1) {
+                setCurrent(current + 1);
+                setShowAnswer(false);
+              } else {
+                alert(
+                  "You've reached the end of the Trivia, Congratulations !"
+                );
+                setCurrent(0);
+                setGrade("");
+              }
             }}
           >
             {" "}
