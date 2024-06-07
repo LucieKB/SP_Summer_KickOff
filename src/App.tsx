@@ -58,7 +58,7 @@ function App() {
   const [value, setValue] = useState("");
 
   const handleSubmit = () => {
-    if (value === "adult") {
+    if (value === "Adult") {
       setShowButtons(true);
     } else {
       setError("Invalid Password");
