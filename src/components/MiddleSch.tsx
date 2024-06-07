@@ -24,7 +24,9 @@ export const MiddleSch = () => {
           <p>Emil</p>
           <p>Harvey</p>
           <p>Kai</p>
-          <p>Name5</p>
+          <p>
+            <i>Howie?</i>
+          </p>
         </Text>
       </Collapse>
     </Box>

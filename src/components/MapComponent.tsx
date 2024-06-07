@@ -42,7 +42,7 @@ const MapComponent: React.FC = () => {
         color: "purple",
         anchor: "center",
       })
-        .setLngLat([-111.60802, 40.7451])
+        .setLngLat([-111.608739, 40.744834])
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }).setHTML(
             "<h4>" +
@@ -74,7 +74,7 @@ const MapComponent: React.FC = () => {
         color: "lightblue",
         anchor: "center",
       })
-        .setLngLat([-111.624314, 40.750179])
+        .setLngLat([-111.623812, 40.750101])
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }).setHTML(
             "<h4>" +
@@ -99,6 +99,32 @@ const MapComponent: React.FC = () => {
               "</h4><p>" +
               "Drink a lemonade while playing Connections !" +
               "</p>"
+          )
+        )
+        .addTo(map);
+
+      // Hidden envelopes 1
+      new mapboxgl.Marker({
+        color: "black",
+        anchor: "center",
+      })
+        .setLngLat([-111.616939, 40.746814])
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }).setHTML(
+            "<h4>Hidden Envelopes 1</h4>"
+          )
+        )
+        .addTo(map);
+
+      // Hidden envelopes 2
+      new mapboxgl.Marker({
+        color: "black",
+        anchor: "center",
+      })
+        .setLngLat([-111.608951, 40.746348])
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }).setHTML(
+            "<h4>Hidden Envelopes 2</h4>"
           )
         )
         .addTo(map);

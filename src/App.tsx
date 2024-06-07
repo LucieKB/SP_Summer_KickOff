@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import MapComponent from "./components/MapComponent";
-import { createTheme, MantineProvider, rem } from "@mantine/core";
+import { createTheme, MantineProvider, rem, TextInput } from "@mantine/core";
 import { ElemOne } from "./components/ElemOne";
 import { ElemTwo } from "./components/ElemTwo";
 import { MiddleSch } from "./components/MiddleSch";
@@ -53,6 +53,17 @@ function App() {
   });
 
   const [showTrivia, setShowTrivia] = useState(false);
+  const [error, setError] = useState("");
+  const [showButtons, setShowButtons] = useState(false);
+  const [value, setValue] = useState("");
+
+  const handleSubmit = () => {
+    if (value === "adult") {
+      setShowButtons(true);
+    } else {
+      setError("Invalid Password");
+    }
+  };
 
   return (
     <MantineProvider theme={theme}>
@@ -67,17 +78,46 @@ function App() {
 
         <div className="App">
           {showTrivia ? <Trivia /> : <MapComponent />}
-          <button id="map-btn" onClick={() => setShowTrivia(!showTrivia)}>
-            {showTrivia ? "Back to Map" : "Trivia Questions"}
-          </button>
-          <button id="map-btn">
-            <a
-              style={{ color: "black" }}
-              href="https://connection-summit-park-seven.vercel.app/"
-            >
-              Connections
-            </a>
-          </button>
+          {showButtons ? (
+            <div>
+              <button id="map-btn" onClick={() => setShowTrivia(!showTrivia)}>
+                {showTrivia ? "Back to Map" : "Trivia Questions"}
+              </button>
+              <button id="map-btn">
+                <a
+                  style={{ color: "black" }}
+                  href="https://connection-summit-park-seven.vercel.app/"
+                >
+                  Connections
+                </a>
+              </button>
+            </div>
+          ) : (
+            <div>
+              <TextInput
+                label="Password"
+                description="Enter password to access to Trivia and Connections"
+                placeholder="password"
+                value={value}
+                onChange={(event) => setValue(event.currentTarget.value)}
+                error={error}
+                width={"fit-content"}
+                display=""
+              />
+              <button
+                style={{
+                  padding: "6px",
+                  border: "black solid 1px",
+                  marginTop: "10px",
+                  fontSize: "12px",
+                  borderRadius: "0px",
+                }}
+                onClick={handleSubmit}
+              >
+                Submit
+              </button>
+            </div>
+          )}
         </div>
       </>
     </MantineProvider>

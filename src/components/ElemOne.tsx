@@ -17,11 +17,14 @@ export const ElemOne = () => {
 
       <Collapse in={opened}>
         <Text>
-          <p>Name1</p>
-          <p>Name2</p>
-          <p>Name3</p>
-          <p>Name4</p>
-          <p>Name5</p>
+          <p>Adelaïde</p>
+          <p>Agathe</p>
+          <p>Hunter</p>
+          <p>Ryker</p>
+          <p>
+            <i>Wylder</i>
+          </p>
+          <p></p>
         </Text>
       </Collapse>
     </Box>
